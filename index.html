@@ -1,0 +1,99 @@
+<!-- Digitando html5 ele já gera o código padrão automático.
+Por causa do emmet, abrevições com atalho. Para ganhar produtividade.-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> <!--Cabeça, a prte pensante do cérebro, cuida da cordenação, configuração-->
+    <meta charset="UTF-8"> <!-- Para aceitar caracteres especiais.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX</title>
+    <link rel="stylesheet" href="style/main.css">
+
+    <!--Responsividade-->
+    <link rel="stylesheet" href="/style/responsive.css">
+
+    <!--owl css-->
+    <link rel="stylesheet" href="style/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="style/owl/owl.theme.default.min.css">
+</head>
+<body>
+    <!--Toda estrutura html tem divs, que são os quadradinhos.Tags semanticas são mais para quem está olhando, do que para o sistemas
+        Ex.: <header>, <footer>-->
+    <header>
+        <div class="container">
+            <h2 class="logo">NETFLIX</h2>
+            <nav> <!--Menus de navegação--> 
+                <a href="#">Iniciar</a>
+                <a href="#">Séries</a>
+                <a href="#">Filmes</a>
+                <a href="#">Documentários</a>
+            </nav>
+        </div>
+    </header>
+
+    <main> <!--Serve mais para SEO-->
+        <div class="filme-principal"> <!--Caixa filho do main. Todas as caracteristicas dessa classe lá no css será herdada pelos outros filhos, 
+            mas não para as classes netas.-->
+            <div class="container"> <!--Mesmo que wrapper. Classe filha da filme-principal.-->
+                <h3 class="titulo" >HOUSE OF CARDS</h3>
+                <p class="descricao">Nada pode impedir o político sem escrúpulos Frank Underwood de conquistar Washington.
+                    Assista a nova temporada de House of Cards que está imperdível.
+                </p>
+            <div class="botoes"> <!--Classe neta da filme-principal, ou seja, não herda as características dela.-->
+                <button role="button" class="botao"> <!--Para redenrizar o botão da forma correta em qualquer lugar.-->
+                    <i class="fas fa-play"></i>
+                    ASSISTIR AGORA
+                </button>
+                <button role="button" class="botao">
+                    <i class="fas fa-info-circle"></i>
+                    MAIS INFORMAÇÕES
+                </button>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <div class="carrossel-filmes">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img class="box-filme" src="img/mini1.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini2.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini3.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini4.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini5.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini6.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini7.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini8.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini9.jpg" alt="" srcset="">
+            </div>
+            <div class="item">
+                <img class="box-filme" src="img/mini10.jpg" alt="" srcset="">
+            </div>
+        </div>
+    </div>
+
+    <!--A ideia é sempre carregar o javaScript no final, ou seja depois que a página for carregada!-->
+    <script src="https://kit.fontawesome.com/5300912870.js"></script><!--Já deixa padronizado de acordo com o projeto-->
+    <!--owl js-->
+    <script src="js/owl/jquery.min.js"></script>
+    <script src="js/owl/owl.carousel.min.js"></script>
+    <script src="js/owl/setup.js"></script>
+    
+</body>
+</html>

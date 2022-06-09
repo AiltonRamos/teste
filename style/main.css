@@ -1,0 +1,127 @@
+/*Para formatação de estilo. CSS: Cascading Style Sheets, ou seja, Folhas de Estilo em Cascatas.
+Se você criar um site em um navegado, ele pode estar diferente em outro navegador.
+Os bons desenvolvedores entendem a fundo de como as coisas funcionam.
+WRAPPER = ENVELOPAR TUDO LÁ DENTRO, OU SEJA, VAI ANDAR JUNTO COM ELE.
+ALGUNS DIZEM QUE NÃO HÁ DIFERENÇA ENTRE WRAPER E CONTAINER
+
+Portanto, em algumas situações:
+A container é para definir o estilo de toda a largura de uma seção. 
+A wrapper é para estilizar e centralizar o max-widthconteúdo dentro dele.
+
+Os desenvolvedores que estão à frente são os que sabem diferenciar escrever códigos de solucionar dores, problemas.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*O limite de tudo vai ser a borda da caixa, ninguém vai ultrapassar a borda da caixa. Se os elementos não
+    caberem alí, eles vão se expremer, mas não se romper para sair da caixa.*/
+}
+
+/*Definindo variáveis no CSS - Se o site tiver duas cores predominantes, é interessante defini-las aqui.*/
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+/*Elementos base*/
+body {
+    /*background-color:white;*/
+    background: var(--preta); /*Para definir a cor que está na variável no background.*/
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    /*border: 1px solid black; /*Essa é a caixa que está falando.*/
+    display: flex; /*Toda vez que você usa o flexblox, ele joga tudo para a linha/row.*/
+    flex-direction: row; /*Essa é a propriedade default, se eu não declarar ela, vai ser padrão da mesma forma.*/
+    align-items: center; /*Trabalha na vertical*/
+    justify-content: space-between; /*Trabalha na horizontal. Dessa forma ele vai ter um espaço entre as tags, que é o h2 e nav.*/
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: "Arial", Times;
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover { /*Toda vez que o mouse passar em cima da texto*/
+    color: #fff;
+}
+
+/*Filme pricipal*/
+
+.filme-principal {
+    font-size: 16px;
+    /*Dá uma camada fina acima da imagem. Pois o gradiente sempre vai te pedir mais de uma cor.*/
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url("/img/capa-house.jpg");
+
+    height: 400px;
+    background-size: cover; /*Pegue a área de cobertura da nossa caixa.*/
+
+    display: flex;
+    flex-direction: column; /*Para ficar em vertical*/
+    justify-content: center; /*Para centralizar*/
+    align-items: flex-start; /*Para começar da esquerda. O justify-content e o align-items sempre se invertem/seguem a direção do flex-direction;*/ 
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+.filme-principal .titulo {
+    margin-top: 15%; /*Calcula automaticamente*/
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);/*1ª a cor do green, verde, azul e a camada alpha %*/
+    border: none;
+    color: white;
+    padding: 15px 30px; /*Só um valor vai para os 4 cantos.
+    Os 2 valores, 1º é pra cima e pra baixo, 2º esquerda e direita,
+    e os 4 valores são, pra top, right, botton e left.*/
+    margin-right: 15px;
+    font-size: 15px;
+
+    cursor: pointer;
+    transition: 1s ease all;/*Cuida da parte da animação de uma transição e outra.*/
+}
+
+.botao:hover{/*Para colocar animação no botão*/
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 5px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%; /*Só para o texto não ultrapassar toda a tela*/
+}
+
+.box-filme{ /*Para aparecer no tamanho natural*/
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
